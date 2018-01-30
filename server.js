@@ -7,6 +7,3 @@ app.listen(3003);
 module.exports = app;
 
 console.log('Servidor ejecutandose en http://localhost:3003/');
-
-/** Esto es una prueba commit*/
-var=23;
