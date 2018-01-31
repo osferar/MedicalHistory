@@ -8,6 +8,11 @@ var users = require('../../app/controllers/users.server.controller');
 module.exports = function(app) {
   // Configura la ruta base para 'users'
   app.route('/users')
-  .post(users.create)
-  .get(users.list);
-}
+    .post(users.create)
+    .get(users.list);
+  app.route('/users/:userId')
+    .get(users.read)
+    .put(users.update)
+    .delete(users.delete);
+  app.param('userId', users.userByID);
+};
